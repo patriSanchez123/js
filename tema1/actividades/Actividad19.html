@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write(`1.Sumar<br> 2.Restar <br> 3.Multiplicar <br> 4.Dividir <br>`)
+        let numero1=prompt('Introduce el primer numero');
+        let numero2=prompt('Introduce el Segundo numero');
+        let opcion=prompt('Introduce una opción');
+        parseInt(opcion)
+
+        switch(parseInt(opcion)){
+            case 1:
+                document.write(`El total de la suma es: ${(parseFloat(numero1))+(parseFloat(numero2))}`);
+                break;
+                case 2:
+                document.write(`El total de la resta es: ${(parseFloat(numero1))-(parseFloat(numero2))}`);
+
+                break;
+                case 3: 
+                document.write(`El total de la multiplicación es: ${(parseFloat(numero1))*(parseFloat(numero2))}`);
+                break;
+                case 4:
+                    if(numero2==0){
+                            document.write(`No se puede dividir entre 0`);
+                    }
+                    else{
+                        document.write(`El total de la divición es: ${(parseFloat(numero1))/(parseFloat(numero2))}`);
+                    }
+                
+                    break;
+                default:
+                    document.write(`<br>Introduce una opcion valida`);    
+
+
+
+
+        }
+    </script>
+</body>
+</html>

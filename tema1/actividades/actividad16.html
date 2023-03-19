@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejerccicio 16</title>
+</head>
+<body>
+    <script>
+     /*Escribe un programa que calcule una ecuación de segundo grado a partir de los valores
+de los coeficientes a, b y c.*/
+// raiz cuadrada Math.sqrt() 
+//elevado let squaredNumber2 = Math.pow(variable,2);
+//cambiar de signo * -1
+A=0;
+B=0;
+C=0;
+let x1;
+let x2;
+
+
+A=prompt('Introduce el Numero A'); 
+B=prompt('Introduce el NUmero B');
+C=prompt('Introduce el Numero C'); 
+let disc=(B*B)-(4*A*C);
+if(disc<0){
+document.write('No tiene ninguna solución real');
+
+}
+else if(disc==0){
+document.write('Solo tiene una solución');
+x1=(-B)/(2*A);
+document.write('x1= '+ x1);
+
+}
+else{
+x1=((-B) + Math.sqrt(disc))/(2*A);
+x2=((-B )- Math.sqrt(disc))/(2*A);
+document.write('Resultado 1 :' + x1+'<br>');
+document.write('Resultado 2 :' + x2);
+
+
+}
+
+
+
+
+ 
+
+    </script>
+    
+    
+    
+    
+</body>
+</html>

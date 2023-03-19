@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+    <div id="formulario">
+<fieldset>
+    <h1>Formulario de registro</h1>
+
+    <form action="#" name="form" method="post">
+        <label for="email">Email <br><input type="email" id="email" name="email" value="Hola"></label><br>
+        <label for="password">Password <br><input type="password" id="password" name="password"></label><br>
+        <label for="nombre">Nombre <br><input type="text" id="nombre" name="nombre"></label><br>
+        <label for="edad">Edad <br><input type="number" id="edad" name="edad"></label><br>
+        <fieldset>
+            <legend>Genero:</legend>
+        <label for="genero">Hombre<input type="radio" id="genero" name="genero" value="Hombre"></label><br>
+        <label for="genero">Mujer<input type="radio" id="genero" name="genero"></label><br>
+    </fieldset>
+            <legend>Pais:</legend>
+        
+        <select id="pais" name="pais">
+            <option value="españa">España</option>
+            <option value="Francia">Francia</option>
+            <option value="Alemania">Alemania</option>
+            <option value="portugal">Portugal</option>
+          </select>
+        <fieldset>
+            <legend>Intereses:</legend>
+        <label for="coches">Coches<input type="checkbox" id="coches" name="vehiculos"></label>
+        <label for="motos">Motos<input type="checkbox" id="motos" name="vehiculos"></label>
+        <label for="barcos">Barcos<input type="checkbox" id="barcos" name="vehiculos"></label>
+        
+    </fieldset>
+    <input type="submit" name="enviar" value="Enviar">
+    
+    </form>
+
+</fieldset>
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html>

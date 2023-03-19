@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>Restricciones complejas</title>
+</head>
+
+<body>
+    
+    <div id="form">
+
+
+        <form action="#" method="get" id="formulario">
+            
+            <h2>Formulario registro</h2>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" name="nombre" id="nombre" class="texto"><br>
+    
+            <label for="pass">Contraseña:</label><br>
+            <input type="text" name="pass" id="pass" class="texto"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="text" name="email" id="email" class="texto"><br>
+
+            <label for="telefono">Telefono:</label><br>
+            <input type="telefono" name="telefono" id="telefono" class="texto"><br>
+
+            <label for="telefono2">Telefono alternativo:</label><br>
+            <input type="telefono2" name="telefono2" id="telefono2" class="texto"><br>
+
+            <label for="info">Información personal</label><br>
+            <textarea name="textarea" rows="10" cols="29"></textarea>
+
+
+
+            <legend>Intereses:</legend>
+            <div class="interes">
+                <div class="inter">
+                    <input type="checkbox" name="desarrollo" id="desarrollo" value="desarrollo" ><label for="desarrollo">Desarrollo</label>
+                </div>
+                <div class="inter">
+                    <input type="checkbox" name="disenio" id="disenio" value="disenio"><label for="disenio" >Diseño</label>
+                </div>
+                <div class="inter">
+                    <input type="checkbox" name="pruebas" id="pruebas" value="pruebas" ><label for="pruebas" >Pruebas</label><br>
+                </div>
+                <div class="inter">
+                    <input type="checkbox" name="negocios" id="negocios" value="negocios"><label for="negocios" >Negocios</label><br>
+                </div>
+                <div class="inter">
+                    <input type="checkbox" name="analisis" id="analisis" value="analisis" ><label for="analisis" >Análisis</label><br>
+                </div>
+            
+            </div>
+            <input type="submit" name="enviar" id="enviar" value="Enviar" formnovalidate="formnovalidate">
+            
+        </form>
+    </div>
+    
+    <script src="./js/script.js" type="module"></script>
+</body>
+
+</html>

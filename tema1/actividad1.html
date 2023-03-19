@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1</title>
+</head>
+<body>
+    <h1>Activiad 1</h1>
+    <script>
+        const LIMITE_ERROR=0;
+        const LIMITE_MAYOR=18;
+        const LIMITE_JOVEN=35;
+        const EDAD_ERROR="Edad erronea";
+        const MENOR_EDAD="Es menor de edad";
+        const JOVEN_EDAD="Es joven";
+        const MADURO_EDAD="Es maduro";
+        let edad=25;
+
+        main();
+        function main(){
+
+            let edad=5;
+
+            console.log(getClasificacionEdad(edad));
+
+        }
+
+        function getClasificacionEdad(edad){
+            let resultado="";
+            if(edad<=LIMITE_ERROR){
+                
+                resultado=EDAD_ERROR;
+
+            }
+            else if(edad<LIMITE_MAYOR){
+                
+                resultado=MENOR_EDAD;
+
+            }
+            else if(edad>LIMITE_MAYOR){
+                resultado=JOVEN_EDAD;
+            }
+            else if(edad>LIMITE_JOVEN){
+
+                resultado=MADURO_EDAD;
+            }
+            return resultado;
+        }
+
+
+    </script>
+    
+</body>
+</html>

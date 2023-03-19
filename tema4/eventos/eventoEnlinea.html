@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento en linea </title>
+</head>
+<body>
+        <!--Este evento  no se recomienda-
+onmouseover pasar el raton
+onmouseover cuando no se pasa el ratón
+-->
+
+<p id="parrafo1" onclick="this.innerHTML='Ha cambiado'" onmouseover="this.style.background='red'"
+onmouseout="this.style.background='white'">Ejemplo eventos</p>
+<!---Otra forma de referirse-->
+<p id="parrafo2" onclick="document.getElementById('parrafo2').innerHTML='Ha cambiado'"
+onmouseover="this.style.background='red'" onmouseout="this.style.background='white'">Ejemplo eventos</p>
+</body>
+</html>

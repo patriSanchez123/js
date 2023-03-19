@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>Actividad 3</title>
+</head>
+
+<body>
+    
+    <div id="form">
+
+        <h2>Formulario registro</h2>
+        <form action="#" method="get">
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" id="email" class="texto" placeholder="miemail@gmail.com"><br>
+            <label for="pass">Password:</label><br>
+            <input type="password" name="pass" id="pass" class="texto" ><br>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" name="nombre" id="nombre" class="texto"><br>
+            <label for="edad">Edad:</label><br>
+            <input type="number" name="edad" id="edad" class="texto" ><br>
+            
+            <div class="genero">
+                <legend>Género</legend>
+            <input type="radio" name="genero" id="hombre" value="Hombre" checked><label for="genero">Hombre</label>
+            <input type="radio" name="genero" id="hombre" value="Mujer"><label for="genero">Mujer</label><br>
+        </div>
+        <div class="pais">
+            <legend>País:</legend>
+            <select name="pais" id="pais">
+                <!--Para poner como predecinido sleecione pais y no aparesca en las opciones-->
+                <option value="España" disabled selected hidden>selecione pais</option>
+                <option value="España">España</option>
+                <option value="Francia">Francia</option>
+                <option value="Alemania">Alemania</option>
+            </select>
+        </div>
+            <legend>Intereses:</legend>
+            <div class="interes">
+            <input type="checkbox" name="coches" id="coches" value="Coches"><label for="coches">Coches</label>
+            <input type="checkbox" name="motos" id="motos" value="Motos"><label for="motos">Motos</label>
+            <input type="checkbox" name="barcos" id="barcos" value="Barcos"><label for="barcos">Barcos</label><br>
+        </div>
+            <input type="submit" name="enviar" id="enviar" value="Enviar">
+        </form>
+    </div>
+</body>
+
+</html>

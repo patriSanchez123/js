@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+<body>
+    <div id="formu">
+        <h2>Formulario de registo</h2>
+        <form action="./confirmacion.html" method="get" name="enviar">
+        <label for="email">Email:</label><br>
+            <input type="email" name="email" id="email"><br>
+        <label for="password">Password:</label><br>
+            <input type="password" name="password" id="password"><br>
+        <label for="name">Nombre:</label><br>
+            <input type="text" name="name" id="name"><br>
+        <label for="edad">Edad:</label><br>
+            <input type="number" name="edad" id="edad">
+        <fieldset>
+            <legend>Género</legend>
+            <input type="radio" name="genero" id="generoHombre" value="Hombre"><label for="generoHombre">Hombre</label>
+            <input type="radio" name="genero" id="generoMujer" value="Mujer"><label for="generoMujer">Mujer</label>
+        </fieldset>
+        <label for="pais">Pais</label><br>
+        <select name="pais">
+            <option value="Francia">Francia</option>
+            <option selected value="España">España</option>
+            <option value="Alemania">Alemania</option>
+      
+          </select>
+        <fieldset>
+            <legend>Intereses</legend>
+            <input type="checkbox" name="intereses" id="coches" values="coches"><label for="intereses">Coches</label>
+            <input type="checkbox" name="intereses" id="motos" values="motos"><label for="intereses">Motos</label>
+            <input type="checkbox" name="intereses" id="barcos" values="barcos"><label for="intereses">Barcos</label>
+        </fieldset>
+        <input type="submit" values="enviar" name="enviar">
+        </form>
+    </div>
+    
+
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array.every</title>
+</head>
+<body>
+    <script>
+        function callback(elem){
+
+            return elem >= 18;
+        }
+
+        function every(callback,arr){
+            let resultado;
+            for (let i = 0; i < arr.length; i++) {
+                let tranformado=callback(arr[i])
+                resultado.push(tranformado);
+
+                return resultado;
+                
+            }
+        }
+        //////Segunda forma de hacerlo
+            function every2(callback,arr){
+            let resultado=true;
+            for (let i = 0; i < arr.length && resultado; i++) {
+                let resultado=callback(arr[i])
+
+                return resultado;
+                
+            }
+        }
+
+    let arr=[18,21,27,19,21,21];
+    console.log(arr.every(callback));    
+    </script>
+</body>
+</html>

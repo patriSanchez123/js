@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argumentos por defecto</title>
+</head>
+<body>
+    <script>
+
+        /**
+         * En ES6 es posible definir valores por defecto para los argumentos de una función. Prueba el
+        siguiente ejemplo y observa los valores de salida en la invocación de las funciones:
+        **/
+        function f(a,b="default",c=3){
+
+            return `${a}-${b}-${c}`;
+        }
+        console.log(f(5,6,7));
+        console.log(f(5,6));
+        console.log(f(5));
+        console.log(f());
+    </script>
+</body>
+</html>

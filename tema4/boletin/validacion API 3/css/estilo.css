@@ -1,0 +1,80 @@
+
+
+
+
+textarea:focus, input:focus, input[type]:focus {
+    border-color: rgb(255, 144, 0);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6);
+    outline: 0 none;
+}
+#form{
+    margin: auto;
+    margin-top: 100px;
+    padding: 5px;
+    border: 1px solid black;
+    width: 250px;
+    
+}
+h2{
+    margin: 0px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    margin-left: 20px;
+}
+.texto{
+    height: 25px;
+    margin: 3px;
+    width: 95%;
+        
+}
+.genero{
+    margin: 5px;
+}
+.pais{
+    margin: 5px;
+}
+.interes label{
+margin-right: 10px;
+margin-left: 2px;
+}
+#enviar{
+    color: white;
+    margin-top: 10px;
+    background-color: blue;
+    width: 98%;
+    height: 40px;
+}
+
+#pais{
+    margin: 3px;
+    width: 95%;
+    height: 25px;
+}
+
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+    outline: none;
+    background-color: rgb(82, 82, 253);
+}
+
+input[type="submit"]:disabled {
+    outline: none;
+    background-color: gray;
+}
+
+input.error {
+    border: 2px solid rgb(210, 4, 4);
+}
+
+.campoAnadir {
+    font-size: small;
+    margin: 0px;
+    color: rgb(210, 4, 4);
+}
+
+/**Dar estilo a los elementos invalidos **/
+/* input:invalid{
+    border-color: red;
+} */
+
+

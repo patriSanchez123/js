@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barajados de arrays</title>
+
+<!--Librerias Underscore.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+</head>
+<body>
+    <script>
+
+
+/**
+var arrayOrdenado = [1,2,3,4,5,6,7,8,9];
+//_.shuffle el metodo de esta libreria sirve para desordenar un array
+arrayDesordenado = _.shuffle(arrayOrdenado);
+console.log(arrayDesordenado);**/
+
+
+
+let  arrayOrdenado=[1,2,3,4,5,6,7,8,9];
+
+desordenar(arrayOrdenado);
+
+for (let i = 0; i < arrayOrdenado.length -1; i++) {
+    console.log(arrayOrdenado[i]);
+    
+}
+
+function desordenar(arrayOrdenado){
+   let aux;
+   let numeroAleatorio;
+
+   //esto es un algoritmo de fisher
+   
+	for (let index = arrayOrdenado.length -1 ; index > 0; index--) {
+    //guardamaos el numero aleatorio en una variable    
+    numeroAleatorio=aleatorio(index-1,0-1);
+    //guardamos el array con indice
+    aux=arrayOrdenado[index];
+    //igualamos el array el indice del array con el numero aleatorio
+    arrayOrdenado[index]=arrayOrdenado[numeroAleatorio];
+    //igualamos el array de indice aleatorio a aux
+    arrayOrdenado[numeroAleatorio]=aux;
+    }  
+    
+  
+  	 		
+}
+function aleatorio(min,max) {
+			
+			return Math.floor((Math.random()*(max-min+1))+min);
+			
+		}
+
+    </script>
+    
+</body>
+</html>
+
+

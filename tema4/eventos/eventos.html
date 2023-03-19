@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento tradicional</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+
+<script type="text/javascript">
+//Windows onload carga primero toda la página, para no tener problemas a la hora de acceder a los elementos
+// y encontrarnos nada en null
+    window.onload= function(){
+
+        document.getElementById("parrafo5").onclick= cambiarEstilo;
+    }
+    </script>
+
+<body>
+    <!--Eventos mediante funciones-->
+    <p id="parrafo3" onclick="callback(this);">Ejemplo de eventos</p>
+    <script src="./js/script.js"></script>
+
+    <!--Para no hacer la funcion por defecto se le pone return false (es decir no va a la pagina de debian)-->
+    <!---Si ele añadimos return false no hace la funcion que hace por defecto-->
+    <a href="https://www.debian.org" onclick=" return informar();">Debian</a>
+
+    <p id="parrafo4">Parrafo 4</p>
+    <p id="parrafo5">Parrafo 5</p>
+    
+
+
+    <script type="text/javascript">        
+        function callback(elem) {
+            elem.innerHTML = "Cambio en el tercer parrafo";
+        }
+
+        function informar() {
+            return confirm("Quieres ir a debian?");
+        }
+
+        ///////Modelo tradicional///////////////////////////////////////////////
+        
+        /** si se pone cambiarEstilo es el propio elemento el que llama a  la función y si se pone
+        cambiarEstilo() se llama a la función desde windows
+        Cuando se le ponen los parantesis lo que está llamando siempre a la función y cuando no se le ponen
+        los parensis hace referencia en el monento que se cliquea
+        document.getElementById("parrafo4").onclick = cambiarEstilo;**/
+
+        function cambiarEstilo() {
+            alert("Se lanza el evento");
+            //Esto en windows no funciona
+            this.innerHTML = "Cambiando el contenido";
+            //Otra manera de acceder
+            document.getElementById("parrafo4").style.background = "blue";
+
+            //Esto sirve para que solo se ejecute una sola vez
+            this.onclick=null;
+
+        }
+    </script>
+</body>
+
+</html>

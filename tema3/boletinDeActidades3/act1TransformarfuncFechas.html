@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transormar a funciones Fecha </title>
+</head>
+<body>
+    <script>
+
+/*Reescribe estas funciones anónimas utilizando la notación flecha:
+a)const obtenerSaludo = function() {
+return “¡Hola!”;
+}**/
+
+const obtenerSaludo=()=> "Hola";
+
+console.log(obtenerSaludo());
+
+/**b)const obtenerSaludoConNombre = function(nombre) {
+return `Hola ${nombre}`;
+}**/
+let nombre="patri";
+const saludoNombre=(nom)=>'Hola '+nombre;
+
+console.log(saludoNombre(nombre));
+/**c)const sumar = function(a, b) {
+return a + b;
+}**/
+
+const sumar=(a,b)=> suma=a+b;
+console.log(sumar(5,3));
+    </script>
+</body>
+</html>

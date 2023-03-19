@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1</title>
+</head>
+<body>
+
+    <!--------------------------------------------------------------------------------------
+         -Coordenadas superior e izquierda de la ventana del navegador con respecto a la pantalla del
+equipo. Propiedades: screenX/screenLeft y screenY/screenTop.
+- La altura y anchura de la página. Propiedades: innerHeight/clientHeight e
+innerWidth/clientWidth.
+- La altura y anchura de la ventana del navegador. Propiedades: outerHeight y
+outerWidth.
+------------------------------------------------------------------------------------------->
+    <div id="myDiv">
+    <p>Hola Mundo</p>
+
+</div>
+
+    <script>
+        //Cooredenadas izq y superior
+        let leftEI=window.screenLeft;
+        let topEI=window.screenTop;
+        //let heigh=window.clientHeight;
+        //Funciona para todos los navegadores menos para internet explored
+        let leftx=window.screenX;
+        let topY=window.screenY;
+
+        //Anchura
+        let width=window.innerHeight;
+        //Esta es una manera de medir un div
+        let width2=document.getElementById('myDiv').clientWidth;
+        //Altura
+        let heigh=window.innerHeight;
+        let heigh2=window.clientHeight;
+
+
+
+        //Altura y anchura de la ventana del navegador
+        let heightNavegador=window.outerHeight;
+        let widthNavegador=window.outerWidth;
+        document.write('Cordenadas izq EI ventana del navegador con respecto al equipo ' +leftEI+' px'+'<br>');
+        document.write('Cordenadas superior EI ventana del navegador con respecto al equipo ' +topEI+' px'+'<br>');
+        document.write('Cordenadas izq EI de la ventana del navegador conrespecto al equipo'  +leftx+' px'+'<br>');
+        document.write('Cordenadas superior EI de la ventana del navegador conrespecto al equipo ' +topY+' px'+'<br>');
+        document.write('Anchura de la pagina '+ width+' px'+'<br>');
+        document.write('Anchura de la div '+ width2+' px'+'<br>');
+        document.write('Altura de la ventana '+ heigh2+' px'+'<br>');
+        document.write('Altura de la ventana del navegador '+ heightNavegador+' px'+'<br>');
+        document.write('Anchura de la ventana del navegador '+ widthNavegador+' px');
+    </script>
+</body>
+</html>

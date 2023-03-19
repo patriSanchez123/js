@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo W3C</title>
+</head>
+<body>
+<!--Modelo W3C-->
+    <!--Primer ejemplo-->
+    <p id="parrafo1">Parrafo 1</p>
+    <a href="https://www.google.es" id="enlace">Enlace</a>
+    <p id="parrafo2">Parrafo 2</p>
+    <!--Segundo ejemplo-->
+    <p id="parrafo3">Parrafo 3</p>  
+    <!--tercer ejemplo--->
+    <p id="parrafo4">Parrafo 4</p>  
+    <p id="parrafo5">Parrafo 5</p>  
+    
+    
+    <script src="./js/script.js"></script>
+    <script type="text/javascript">
+        //Se está añadiendo un escuchador de eventos, si quisieramostener mas funciones simplente se hace lo mismo pero se le
+        //abajo y se pone una función diferente 
+        document.getElementById("parrafo1").addEventListener("click",callback,false);
+        document.getElementById("parrafo1").addEventListener("click",callback2,false);
+        //La forma más se encuentra echa, con funciones anomimas
+        document.getElementById("parrafo1").addEventListener("mouseover",function(){
+            this.style.background ="black"; 
+        },false);
+
+        document.getElementById("enlace").addEventListener("click",function(e){
+            // Esto le cambia lo que realmente tiene que hacer y con el funtion e se le va
+            //inyectando a la página 
+            e.preventDefault();
+            alert("Quieto");
+            //Esto no sirve para mucho
+            this.innerText ="No nos vamos a google";
+        },false)
+    // document.getElementById("parrafo1").addEventListener("mouseout",callback4,false);
+
+////////////////FUNCIONES PRIMER EJEMPLO/////////////////////////////////////////
+        function callback(){
+            alert("¿Que dice que hace?");
+        // Eliminar el click, hay que indicarle la funcion que se quiere eliminar
+            this.removeEventListener("click", callback)
+        }
+
+        function callback2(){
+
+            this.style.color="red";
+        }
+
+        function callback3(){
+
+            this.style.background ="black";
+        }
+
+        function callback4(){
+
+        this.style.background ="white";
+        }
+///////////////////////////////////SEGUNDO EJEMPLO/////////////////////////
+document.getElementById("parrafo3").addEventListener("mouseover",manejador,false);
+document.getElementById("parrafo3").addEventListener("mouseout",manejador,false);
+
+/*Sirve de manejador de eventos**/
+function manejador(e){
+switch(e.type){
+    case "mouseover":
+    this.style.background ="red";
+    break;
+    case "mouseout":
+    this.style.background= "white";
+    break;
+}
+
+}  
+/////////////////////////TERCER EJEMPLO//////////////////////////7
+document.getElementById("parrafo4").addEventListener("click",manejador2,false);
+document.getElementById("parrafo5").addEventListener("click",manejador2,false);
+
+function manejador2(e){
+
+    if(e.target.id==="parrafo4"){
+        //El target lo ponemos cambiar por this
+        e.target.innerText="cambiando el parrafo 4";
+    }else if(e.target.id==="parrafo5"){
+        e.target.innerText="cambiando el parrafo 5";
+
+    }
+}
+    </script>
+</body>
+</html>

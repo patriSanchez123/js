@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones anonimas</title>
+</head>
+<body>
+    <script>
+
+        /** 
+        *   Actividad 1. Transforma a funciones anónimas.
+            Reescribe estas funciones como funciones anónimas:
+            a)function obtenerSaludo() {
+            return “¡Hola!”;
+            }
+            b)function obtenerSaludoConNombre(nombre) {
+            return `Hola ${nombre}`;
+            }
+            c)function sumar(a, b) {
+            return a + b;
+            }*/
+
+            //a
+            let saludo= function(){
+                console.log("Hola mundo");
+            }
+            saludo();
+            
+            //b
+
+            let saludoConNombre=function(){
+
+                let nombre=prompt("Introduce nombre");
+                console.log(`Hola ${nombre}`);
+            }
+            saludoConNombre();
+
+            //c
+            let sumar= function(a,b){
+                let res=a+b;
+                console.log(res);
+            }
+            sumar(3,5);
+
+            //funcion flecha
+
+            let array=[1,6,7,8];
+            const map=array.map(x=>x*2);
+            console.log(map)
+    </script>
+   <div id="1">
+
+
+   </div>
+</body>
+</html>

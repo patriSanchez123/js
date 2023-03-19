@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array.map</title>
+</head>
+<body>
+    <script>
+
+function callback(elem,index,arr){
+        const value=elem*2;
+        return value;
+
+        }
+        
+function map(callback,arr){
+let resultado=0;
+    for (let i = 0; i < arr.length; i++) {
+        let tranformado=callback(arr[i],i,arr);
+        resultado.push(tranformado);
+        
+        return resultado;
+    }
+}
+        const a=[1,2,3,4];
+        console.log(a.map(callback));
+
+    </script>
+</body>
+</html>

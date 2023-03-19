@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 14</title>
+</head>
+<body>
+    <script>
+        
+        let salir=false;
+        const NUMERO=prompt('Ingrese un numero de más de una cifra');
+        let numeroDividido;
+        let ultimaCifra;
+        do{
+            
+            if((NUMERO<10) || (NUMERO<=0)){
+                NUMERO=prompt('Ingrese un numero de más de una cifra');
+            }
+                
+            else{
+                salir=true;
+            }
+    }while(!salir);
+    
+
+    ultimaCifra=NUMERO.length-1;
+    
+
+    document.write('El primer digito del numero es: '+NUMERO[0]);
+    </script>
+    
+</body>
+</html>

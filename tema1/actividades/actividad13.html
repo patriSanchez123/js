@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 13</title>
+</head>
+<body>
+    <script>
+        /*Escribe un programa que dada una hora determinada (horas y minutos), calcule los
+segundos que faltan para llegar a la medianoche.**/
+let MEDIA_NOCHE=24;
+let MIN=60;
+let SEGUNDOS=60;
+let HORA=new Date(0,0,0,12,50,0);
+let segundosHoraMedianocheimpunto=(((MEDIA_NOCHE-HORA.getHours())*60)*60);
+let segundosHorasMediaNoche=(((MEDIA_NOCHE-HORA.getHours()-1)*60)*60);
+let segundosMinutosMedianoche=((MIN-HORA.getMinutes())*SEGUNDOS);
+
+if(HORA.getMinutes()==0){
+    console.log('El total de segundos para llegara a media noche son:'+ segundosHoraMedianocheimpunto);
+
+}
+else{
+console.log(`El total de segundos para llegara a media noche son: ${segundosHorasMediaNoche+segundosMinutosMedianoche}`);
+
+}
+
+    </script>
+</body>
+</html>

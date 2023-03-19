@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones puras</title>
+</head>
+<body>
+    <script>
+        //preguntar por esto
+        const oanio=new Date().getFullYear();
+        function esAnioBisiesto(){
+
+            return oanio % 4==0;
+        }
+        console.log(esAnioBisiesto());
+
+        
+
+        function obtenerSiguienteColor(){
+            
+        const aColores=["red","orange","yellow","green","blue"];
+        let iIndiceColor=-1;
+
+            return aColores[iIndiceColor+1];
+        }
+        console.log(obtenerSiguienteColor());
+    </script>
+</body>
+</html>

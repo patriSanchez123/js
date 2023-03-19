@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>Restricciones complejas</title>
+</head>
+
+<body>
+    
+    <div id="form">
+
+      
+
+        <form action="#" method="get" id="formulario">
+            
+            <h2>Formulario registro</h2>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" name="nombre" id="nombre" class="texto"><br>
+    
+            <label for="apellidos">Apellidos:</label><br>
+            <input type="text" name="apellidos" id="apellidos" class="texto"><br>
+
+            <label for="url">Web personal:</label><br>
+            <input type="url" name="url" id="url" class="texto"><br>
+
+            <label for="edad">Edad:</label><br>
+            <input type="number" name="edad" id="edad" class="texto" min="18" max="60" ><br>
+
+            <label for="fecha">Fecha:</label><br>
+            <input type="date" name="fecha" id="fecha" class="texto" required><br>
+
+            <div class="ocupacion">
+                <legend>Ocupación:</legend>
+                <select name="ocupacion" id="ocupacion">
+                    <!--Para poner como predecinido sleecione pais y no aparesca en las opciones-->
+                    <option value="" disabled selected hidden>Selecione ocupación</option>
+                    <option value="activo">Activo</option>
+                    <option value="desmpleado">Desmpleado</option>
+                    <option value="jubilado">Jubilado</option>
+                </select>
+            </div>
+
+            <div class="genero">
+                <legend>Hijos</legend>
+            <input type="radio" name="hijos" id="si" value="si"><label for="si" >Si</label>
+            <input type="radio" name="hijos" id="no" value="no"><label for="no">No</label><br>
+        </div>
+     
+            <legend>Intereses:</legend>
+            <div class="interes">
+            <input type="checkbox" name="cine" id="cine" value="cine"><label for="coches">Cine</label>
+            <input type="checkbox" name="musica" id="musica" value="musica"><label for="musica">Música</label>
+            <input type="checkbox" name="teatro" id="teatro" value="teatro"><label for="teatro">Teatro</label><br>
+        </div>
+            <input type="submit" name="enviar" id="enviar" value="Enviar" formnovalidate="formnovalidate">
+        </form>
+    </div>
+    
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

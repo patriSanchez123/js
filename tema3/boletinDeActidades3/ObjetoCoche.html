@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    const marchas=["P","1","2","3","4","5","6","R"];
+class Vehiculo{
+    _pasajeros=0;
+    constructor(pasajeros){
+        this._pasajeros=pasajeros;
+    }
+
+    get pasajeros(){
+return this.pasajeros;
+}
+
+//modificar fabricante
+set pasajeros(_pasajeros){
+this._fabricante=_pasajeros;
+}
+
+}
+class Coche extends Vehiculo{
+ _fabricante="";
+ _modelo="";
+ _marcha="P";
+    constructor(pasajeros,fabricante,modelo){
+        super(pasajeros);
+        this._fabricante=fabricante;
+        this._modelo=modelo;
+    }
+/**
+* Función pacheara cambiar la marcha de co
+**/
+cambiarMarcha() {
+
+let cambioDeMarcha=prompt("Introduce la marcha deseada");
+if(!marchas.includes(cambioDeMarcha)){
+
+    console.log("La marcha insertada no existe");
+}else{
+
+   this._marcha=cambioDeMarcha;   
+}
+}
+/**Función para imprimir los datos del coche*/
+toString(){
+
+return `${this._pasajeros} ${this._fabricante} ${this._modelo} ${this._marcha}`;
+}
+
+/**Mostrar fabricante **/
+get fabricante(){
+return this._fabricante;
+}
+
+/**Mostrar modelo **/
+get modelo(){
+return this._modelo;
+}
+
+/**Mostar Marcha **/
+get marcha(){
+return this._marcha;
+}
+
+//modificar fabricante
+set fabricante(_fabricante){
+this._fabricante=_fabricante;
+}
+//Modificar modelo
+set modelo(modelo){
+this._modelo=modelo;
+}
+//modificar marcha
+set marcha(marcha){
+this._marcha=marcha;
+}
+
+static comparar(coche1,coche2){
+
+    return coche1===coche2;
+}
+
+}
+
+//Crear coches    
+let coche1=new Coche(5,"Tesla","ModelS");
+let coche2=new Coche(5,"Mazda","3i");
+//Cambiar marchas
+coche1.cambiarMarcha();
+coche2.cambiarMarcha();
+//Mostrar datos de loss coches
+console.log(coche1.toString());
+console.log(coche2.toString());
+//Motrar atributos de cada coche
+console.log(coche1.fabricante);
+console.log(coche2.fabricante);
+console.log(coche1.modelo);
+console.log(coche2.modelo);
+console.log(coche1.marcha);
+console.log(coche2.marcha);
+//Modificar atributos
+console.log(coche1.fabricante="Seat");
+console.log(coche2.fabricante="Volvo");
+console.log(coche1.modelo="Ibiza");
+console.log(coche2.modelo="S30");
+console.log(coche1.marcha="R");
+console.log(coche2.marcha="3");
+coche1.pasajeros=5;
+coche2.pasajeros=3;
+//Mostrar Atribitos modificados
+console.log(coche1.toString());
+console.log(coche2.toString());
+console.log(Coche.comparar(coche1,coche2));
+  </script>
+</body>
+</html>

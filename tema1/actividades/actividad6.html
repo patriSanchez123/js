@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+   <script>
+     /*Escribe un programa que pinte por pantalla una pirámide rellena a base de asteriscos.
+La base de la pirámide debe estar formada por 9 asteriscos.**/
+const BASE=9;
+let linea;
+let espacios=" ";
+ 
+for (let i = 0; i < BASE; i++) {
+    linea="";
+
+    for (let y = 0; y < BASE -1 -i; y++) {
+        linea+=" ";
+        
+    }
+    
+    for (let j = 0; j < i ; j++) {
+
+        linea = linea + '* ';
+    }
+    console.log(linea);
+  }
+
+   </script>
+</body>
+</html>

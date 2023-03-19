@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>Restricciones complejas</title>
+</head>
+
+<body>
+    
+    <div id="form">
+
+
+        <form action="#" method="get" id="formulario">
+            
+            <h2>Formulario registro</h2>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" name="nombre" id="nombre" class="texto"><br>
+    
+            <label for="apellidos">Apellidos:</label><br>
+            <input type="text" name="apellidos" id="apellidos" class="texto"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" id="email" class="texto"><br>
+
+            <!---TODO HACER LOS SELECTED COMUNIDAD AUTONOMA Y PROVINCIAS-->
+            <label for="comunidad"></label><br>Comunidad<select name="comunidad" id="comunidad" ></select>
+            
+            <label for="provincia">Provincia</label><br><select name="provincia" id="provincia" ></select>
+
+
+            <legend>Cursos:</legend>
+            <div class="interes">
+                <div class="inter">
+                    <input type="checkbox" name="introHTML5" id="introHTML5" value="introHTML5" class="intro"><label for="introHTML5">Introducción a HTML5</label>
+                </div>
+                <div class="inter">
+                    <input type="checkbox" name="introCSS3" id="introCSS3" value="introCSS3" class="intro"><label for="introCSS3" >Introducción a CSS3</label>
+                </div>
+                <div class="inter">
+                    <input type="checkbox" name="IntroJs" id="IntroJs" value="IntroJs" class="intro"><label for="IntroJs" >Introducción a JavaScript</label><br>
+                </div>
+                <div class="inter">
+                    <input type="checkbox" name="HTML5Avan" id="HTML5Avan" value="HTML5Avan" class="avanzado"><label for="HTML5Avan" >HTML5 avanzado</label><br>
+                </div>
+                <div class="inter">
+                    <input type="checkbox" name="CSS3Avan" id="CSS3Avan" value="CSS3Avan" class="avanzado"><label for="CSS3Avan" >CSS3 avanzado</label><br>
+                </div>
+                <div class="inter">
+                    <input type="checkbox" name="JsAvan" id="JsAvan" value="JsAvan" class="avanzado"><label for="JsAvan">JavaScript avanzado</label><br>
+                </div>
+            
+            </div>
+            
+            <!---Esto mejor en texto-->
+            <p>Total Precio: </p>
+            <p id="precio">0</p>
+           
+
+            <div class="pago">
+                <legend>Forma de pago:</legend>
+            <div clas="gen">
+                <input type="radio" name="pago" id="tarjeta" value="tarjeta"><label for="tarjeta" >Tarjeta de débito o crédito</label>
+            </div>
+            <div clas="gen">
+                <input type="radio" name="pago" id="paypal" value="paypal"><label for="no">PayPal</label><br>
+            </div>
+            <div clas="gen">
+                <input type="radio" name="pago" id="transferencia" value="transferencia"><label for="transferencia" >Transferencia bancaria</label>
+            </div>
+            
+            
+            
+        </div>
+        <input type="submit" name="enviar" id="enviar" value="Enviar" formnovalidate="formnovalidate">
+            
+        </div>
+            
+        </form>
+    </div>
+    
+    <script src="./js/script.js" type="module"></script>
+</body>
+
+</html>

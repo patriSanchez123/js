@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros indeterminados de elementos</title>
+</head>
+<body>
+    <script>
+            /**
+             * En ES6 es posible pasar a una función un número no determinado de argumentos gracias al
+            operador de propagación (spread operator): “…”. Prueba el siguiente ejemplo:        
+            */
+function anadirPrefijo(prefijo, ...palabras){
+    const palabrasConPrefijo= [];
+    for (let i = 0; i < palabras.length; i++) {
+        palabrasConPrefijo[i]=prefijo +palabras[i];
+    }
+     return palabrasConPrefijo;
+
+}
+console.log(anadirPrefijo("con","verso","vexo","cabo"));
+    </script>
+</body>
+</html>

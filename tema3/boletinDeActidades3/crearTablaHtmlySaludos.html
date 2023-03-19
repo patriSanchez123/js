@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear tabla</title>
+</head>
+<body>
+    <script>
+/**Actividad 2. Dibuja una tabla HTML.
+Crea una función que permita dibujar una tabla HTML. La función recibirá como parámetros el
+número de filas y columnas de la tabla. Por defecto la función creará una tabla de 10 filas y 4
+columnas.
+Actividad 3. Saluda a la clase.
+Crea una función que reciba todos los nombres de los alumnos de una clase y los salude por
+consola.*/
+        function crearTabla(numColum,numFila){
+            //referencia del elemento body
+            let body=document.getElementsByTagName("body")[0];
+            //crea elemento table y tbody
+            let table=document.createElement("table");
+            let tblBody=document.createElement("tbody");
+            //crea las celdas
+            for (let i = 0; i < numFila; i++) {
+            //Crea las hileras o filas
+            let tr=document.createElement("tr");
+                for (let j = 0; j < numColum; j++) {
+            //crea los td y se le añade texto a las celdas
+            let td=document.createElement("td");
+            let texto=document.createTextNode("Fila "+ i+" Columna: "+j);
+            td.appendChild(texto);
+            tr.appendChild(td);
+
+                
+            }
+            //agrega la hilera al final de la tabla(al final del elemento tbbody)
+            tblBody.appendChild(tr)
+            }
+            //posiciona el elemento tbbody  debajo de la tabla
+            table.appendChild(tblBody);
+            body.append(table);
+            //modifica el atributo bolder
+            table.setAttribute("border","2");
+        }
+
+         crearTabla(10,10);
+    
+    function saludoCompañeros(){
+
+        let array=["Pablo","Pablo","Alvaro","Juanlu","Jorge","Jesús","María","Laura","Alejandro","Antonio"];
+        for (let i = 0; i < array.length; i++) {
+            console.log("Hola "+array[i]+"\n");
+            
+        }
+        
+        
+    }
+    saludoCompañeros();
+    </script>
+</body>
+</html>
